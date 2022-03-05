@@ -15,12 +15,45 @@ const buttonSeven = document.querySelector(".buttonSeven");
 const buttonEight = document.querySelector(".buttonEight");
 const buttonNine = document.querySelector(".buttonNine");
 
-buttonOne.addEventListener("click", (e) => {});
-buttonTwo.addEventListener("click", (e) => {});
-buttonThree.addEventListener("click", (e) => {});
-buttonFour.addEventListener("click", (e) => {});
-buttonFive.addEventListener("click", (e) => {});
-buttonSix.addEventListener("click", (e) => {});
-buttonSeven.addEventListener("click", (e) => {});
-buttonEight.addEventListener("click", (e) => {});
-buttonNine.addEventListener("click", (e) => {});
+buttonOne.addEventListener("click", (e) => {
+    fillSpace(e);
+    console.log(e);
+});
+
+buttonTwo.addEventListener("click", (e) => {
+    fillSpace(e);
+});
+
+buttonThree.addEventListener("click", (e) => {
+    fillSpace(e);
+});
+
+buttonFour.addEventListener("click", (e) => {
+    fillSpace(e);
+});
+
+buttonFive.addEventListener("click", (e) => {
+    fillSpace(e);
+});
+
+buttonSix.addEventListener("click", (e) => {
+    fillSpace(e);
+});
+
+buttonSeven.addEventListener("click", (e) => {
+    fillSpace(e);
+});
+
+buttonEight.addEventListener("click", (e) => {
+    fillSpace(e);
+});
+
+buttonNine.addEventListener("click", (e) => {
+    fillSpace(e);
+});
+
+function fillSpace(button) {
+    if (button.target.innerHTML === "_") {
+        button.target.innerHTML = "X";
+    }
+}
