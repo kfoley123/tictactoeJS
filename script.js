@@ -19,7 +19,6 @@ const buttonNine = document.querySelector(".buttonNine");
 
 buttonOne.addEventListener("click", (e) => {
     fillSpace(e);
-    console.log(e);
 });
 
 buttonTwo.addEventListener("click", (e) => {
@@ -59,9 +58,20 @@ function fillSpace(button) {
         if (playerTurn === "X") {
             button.target.innerHTML = "X";
             playerTurn = "O";
+            checkForWin();
         } else {
             button.target.innerHTML = "O";
             playerTurn = "X";
+            checkForWin();
         }
+    }
+}
+
+function checkForWin() {
+    if (
+        buttonOne.innerHTML === buttonTwo.innerHTML &&
+        buttonTwo.innerHTML === buttonThree.innerHTML
+    ) {
+        console.log("you win!");
     }
 }
