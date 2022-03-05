@@ -3,6 +3,8 @@
 //when selected empty space takes either x or o
 //when three in a row x or o wins
 
+let playerTurn = "X";
+
 const buttonOne = document.querySelector(".buttonOne");
 const buttonTwo = document.querySelector(".buttonTwo");
 const buttonThree = document.querySelector(".buttonThree");
@@ -54,6 +56,12 @@ buttonNine.addEventListener("click", (e) => {
 
 function fillSpace(button) {
     if (button.target.innerHTML === "_") {
-        button.target.innerHTML = "X";
+        if (playerTurn === "X") {
+            button.target.innerHTML = "X";
+            playerTurn = "O";
+        } else {
+            button.target.innerHTML = "O";
+            playerTurn = "X";
+        }
     }
 }
