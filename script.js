@@ -5,53 +5,62 @@
 
 let playerTurn = "X";
 
-const buttonOne = document.querySelector(".buttonOne");
-const buttonTwo = document.querySelector(".buttonTwo");
-const buttonThree = document.querySelector(".buttonThree");
+const buttons = document.querySelectorAll(".button");
+console.log(buttons);
 
-const buttonFour = document.querySelector(".buttonFour");
-const buttonFive = document.querySelector(".buttonFive");
-const buttonSix = document.querySelector(".buttonSix");
-
-const buttonSeven = document.querySelector(".buttonSeven");
-const buttonEight = document.querySelector(".buttonEight");
-const buttonNine = document.querySelector(".buttonNine");
-
-buttonOne.addEventListener("click", (e) => {
-    fillSpace(e);
+buttons.forEach((button) => {
+    button.addEventListener("click", fillSpace);
 });
 
-buttonTwo.addEventListener("click", (e) => {
-    fillSpace(e);
-});
+//this is how it would look all written out
 
-buttonThree.addEventListener("click", (e) => {
-    fillSpace(e);
-});
+// const buttonOne = document.querySelector(".buttonOne");
+// const buttonTwo = document.querySelector(".buttonTwo");
+// const buttonThree = document.querySelector(".buttonThree");
 
-buttonFour.addEventListener("click", (e) => {
-    fillSpace(e);
-});
+// const buttonFour = document.querySelector(".buttonFour");
+// const buttonFive = document.querySelector(".buttonFive");
+// const buttonSix = document.querySelector(".buttonSix");
 
-buttonFive.addEventListener("click", (e) => {
-    fillSpace(e);
-});
+// const buttonSeven = document.querySelector(".buttonSeven");
+// const buttonEight = document.querySelector(".buttonEight");
+// const buttonNine = document.querySelector(".buttonNine");
 
-buttonSix.addEventListener("click", (e) => {
-    fillSpace(e);
-});
+// buttonOne.addEventListener("click", (e) => {
+//     fillSpace(e);
+// });
 
-buttonSeven.addEventListener("click", (e) => {
-    fillSpace(e);
-});
+// buttonTwo.addEventListener("click", (e) => {
+//     fillSpace(e);
+// });
 
-buttonEight.addEventListener("click", (e) => {
-    fillSpace(e);
-});
+// buttonThree.addEventListener("click", (e) => {
+//     fillSpace(e);
+// });
 
-buttonNine.addEventListener("click", (e) => {
-    fillSpace(e);
-});
+// buttonFour.addEventListener("click", (e) => {
+//     fillSpace(e);
+// });
+
+// buttonFive.addEventListener("click", (e) => {
+//     fillSpace(e);
+// });
+
+// buttonSix.addEventListener("click", (e) => {
+//     fillSpace(e);
+// });
+
+// buttonSeven.addEventListener("click", (e) => {
+//     fillSpace(e);
+// });
+
+// buttonEight.addEventListener("click", (e) => {
+//     fillSpace(e);
+// });
+
+// buttonNine.addEventListener("click", (e) => {
+//     fillSpace(e);
+// });
 
 function fillSpace(button) {
     if (button.target.innerHTML === "_") {
@@ -69,8 +78,8 @@ function fillSpace(button) {
 
 function checkForWin() {
     if (
-        buttonOne.innerHTML === buttonTwo.innerHTML &&
-        buttonTwo.innerHTML === buttonThree.innerHTML
+        buttons[0].innerHTML === buttons[1].innerHTML &&
+        buttons[1].innerHTML === buttons[2].innerHTML
     ) {
         console.log("you win!");
     }
