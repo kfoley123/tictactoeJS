@@ -79,8 +79,62 @@ function fillSpace(button) {
 function checkForWin() {
     if (
         buttons[0].innerHTML === buttons[1].innerHTML &&
-        buttons[1].innerHTML === buttons[2].innerHTML
+        buttons[1].innerHTML === buttons[2].innerHTML &&
+        buttons[0].innerHTML !== "_"
     ) {
-        console.log("you win!");
+        youWin();
     }
+    if (
+        buttons[3].innerHTML === buttons[4].innerHTML &&
+        buttons[4].innerHTML === buttons[5].innerHTML &&
+        buttons[3].innerHTML !== "_"
+    ) {
+        youWin();
+    }
+    if (
+        buttons[6].innerHTML === buttons[7].innerHTML &&
+        buttons[7].innerHTML === buttons[8].innerHTML &&
+        buttons[6].innerHTML !== "_"
+    ) {
+        youWin();
+    }
+    if (
+        buttons[0].innerHTML === buttons[3].innerHTML &&
+        buttons[3].innerHTML === buttons[6].innerHTML &&
+        buttons[0].innerHTML !== "_"
+    ) {
+        youWin();
+    }
+    if (
+        buttons[1].innerHTML === buttons[4].innerHTML &&
+        buttons[4].innerHTML === buttons[7].innerHTML &&
+        buttons[1].innerHTML !== "_"
+    ) {
+        youWin();
+    }
+    if (
+        buttons[2].innerHTML === buttons[5].innerHTML &&
+        buttons[5].innerHTML === buttons[8].innerHTML &&
+        buttons[2].innerHTML !== "_"
+    ) {
+        youWin();
+    }
+    if (
+        buttons[2].innerHTML === buttons[4].innerHTML &&
+        buttons[4].innerHTML === buttons[6].innerHTML &&
+        buttons[2].innerHTML !== "_"
+    ) {
+        youWin();
+    }
+    if (
+        buttons[0].innerHTML === buttons[4].innerHTML &&
+        buttons[4].innerHTML === buttons[8].innerHTML &&
+        buttons[0].innerHTML !== "_"
+    ) {
+        youWin();
+    }
+}
+
+function youWin() {
+    alert("YOU WIN!");
 }
