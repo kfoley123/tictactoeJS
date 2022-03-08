@@ -6,7 +6,6 @@
 let playerTurn = "X";
 
 const buttons = document.querySelectorAll(".button");
-console.log(buttons);
 
 buttons.forEach((button) => {
     button.addEventListener("click", fillSpace);
