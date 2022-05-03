@@ -3,6 +3,8 @@
 //win scenarios
 //trie scenario
 
+let playerTurnX = true;
+
 var buttons = document.getElementsByClassName("button");
 for (var i = 0; i < buttons.length; i++) {
     console.log(buttons[i]);
@@ -10,5 +12,11 @@ for (var i = 0; i < buttons.length; i++) {
 }
 
 function placeMarker(e) {
-    e.target.innerHTML = "X";
+    if (playerTurnX == true) {
+        e.target.innerHTML = "X";
+        playerTurnX = false;
+    } else {
+        e.target.innerHTML = "O";
+        playerTurnX = true;
+    }
 }
